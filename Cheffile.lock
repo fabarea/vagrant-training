@@ -1,0 +1,65 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apache2 (1.6.6)
+    apt (1.10.0)
+    aws (0.101.2)
+    build-essential (1.4.0)
+    cron (1.2.4)
+    database (1.4.0)
+      aws (>= 0.0.0)
+      mysql (>= 1.3.0)
+      postgresql (>= 1.0.0)
+      xfs (>= 0.0.0)
+    mysql (3.0.2)
+      build-essential (> 1.1.0)
+      openssl (>= 0.0.0)
+    networking_basic (0.0.7)
+    ntp (1.3.2)
+    openssl (1.0.2)
+    php (1.2.2)
+      build-essential (>= 0.0.0)
+      mysql (>= 0.0.0)
+      xml (>= 0.0.0)
+    postgresql (3.0.2)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      openssl (>= 0.0.0)
+    timezone (0.0.1)
+    vim (1.0.2)
+    xfs (1.1.0)
+    xml (1.1.2)
+      build-essential (>= 0.0.0)
+
+GIT
+  remote: https://github.com/irnnr/chef-typo3
+  ref: master
+  sha: d762765061eea32f103ec5d982ea7f165971b007
+  specs:
+    typo3 (0.3.1)
+      apache2 (>= 0.0.0)
+      cron (>= 0.0.0)
+      database (>= 0.0.0)
+      mysql (>= 0.0.0)
+      php (>= 0.0.0)
+
+GIT
+  remote: https://github.com/jondot/graphicsmagick_cookbook
+  ref: master
+  sha: c95ce08c564cdde32f29ecfbcc5d5753fc01490f
+  specs:
+    graphicsmagick (0.1.0)
+
+DEPENDENCIES
+  apache2 (>= 0)
+  apt (= 1.10.0)
+  database (>= 0)
+  graphicsmagick (>= 0)
+  mysql (>= 0)
+  networking_basic (>= 0)
+  ntp (>= 0)
+  php (>= 0)
+  timezone (= 0.0.1)
+  typo3 (>= 0)
+  vim (>= 0)
+
