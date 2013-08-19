@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
   config.vm.network :public_network, :bridge => 'en1: Wi-Fi (AirPort)'
 
   # automatically manage /etc/hosts on hosts and guests
-  config.hostmanager.enabled = true
+  config.hostmanager.enabled = false
   config.hostmanager.manage_host = true
 
   config.vm.synced_folder 'htdocs', '/var/www/site-' + $project_name,
@@ -50,7 +50,6 @@ Vagrant.configure("2") do |config|
     chef.add_recipe 'typo3'
     chef.add_recipe 'typo3::scheduler'
     chef.add_recipe 'training'
-    #chef.add_recipe 'etherpad-lite'
 
     chef.json = {
       :mysql  => {
@@ -74,6 +73,6 @@ Vagrant.configure("2") do |config|
   end
 
   # run host manager after chef
-  #config.vm.provision :hostmanager
+  config.vm.provision :hostmanager
 
 end
